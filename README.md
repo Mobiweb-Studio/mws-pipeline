@@ -5,6 +5,6 @@ This document contains a collection of reusable **composite GitHub Actions** des
 You can use these actions from any other repository by referencing:
 
 ```yaml
-- uses: wilsonmdrs/composite-actions/<framework>/<type>/<action>@main
+- uses: Mobiweb-Studio/mws-pipeline/<framework>/<type>/<action>@main
   with:
     # custom inputs depending on the action
