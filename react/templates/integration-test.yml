@@ -1,0 +1,18 @@
+name: ci-test-pull-request
+run-name: 'Code quality - branch ${{ github.ref_name }}. Triggered by @${{ github.actor }}'
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    name: "Automated Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Mobiweb-Studio/mws-pipeline/react/integration/standard@main
+        name: Standard React CI
+        with:
+          NODE_VERSION: 20.x
+          PACKAGE_MANAGER: yarn
