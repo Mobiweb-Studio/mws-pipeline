@@ -38,7 +38,7 @@ runs:
         cache: ${{ inputs.PACKAGE_MANAGER }}
 
     - name: Install Dependencies
-      run: ${{ inputs.PACKAGE_MANAGER }} install
+      run: ${{ inputs.PACKAGE_MANAGER }} run install-dependencies
       shell: bash
 
     - name: SonarQube Scan
